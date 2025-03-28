@@ -1,3 +1,9 @@
 <template>
-    <h1>Welcome to the Home Page!</h1>
+    <h1>Получить доступ</h1>
+    <NuxtRouteAnnouncer />
+    <LoginForm />
   </template>
+
+<script setup>
+import LoginForm from '~/components/LoginForm.vue';
+</script>

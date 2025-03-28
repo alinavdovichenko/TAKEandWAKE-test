@@ -1,0 +1,65 @@
+// app.vue -----------------------
+header {
+    background-color: #42b983;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  nav {
+    margin-top: 10px;
+  }
+  
+  nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f8f8f8;
+  }
+
+// LoginForm.vue ------------------
+.login-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  label {
+    margin: 5px 0;
+  }
+  
+  input {
+    padding: 10px;
+    margin: 5px 0 15px;
+    font-size: 16px;
+  }
+  
+  button {
+    background-color: #42b983;
+    color: white;
+    border: none;
+    padding: 10px;
+  
+    &:hover {
+      background-color: #3a9a7d;
+    }
+  }
+  
+  .error {
+    color: red;
+    margin-top: 10px;
+  }
