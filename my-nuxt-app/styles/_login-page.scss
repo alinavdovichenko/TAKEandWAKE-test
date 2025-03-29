@@ -1,0 +1,9 @@
+@use 'mixins';
+
+.login-page {
+  width: 100%;
+  height: 100vh;
+  @include mixins.flex-center;
+  background: url('~/public/login-bg.jpg') no-repeat center bottom;
+  background-size: cover;
+}

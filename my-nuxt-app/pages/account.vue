@@ -1,50 +1,34 @@
 <template>
-  <div class="account-container">
-    <h1>Страница аккаунта</h1>
-    <button @click="logout" class="logout-button">Выход</button>
+  <div class="account-page">
     <h2>Товары</h2>
     <DataTable :items="products" />
+    <button @click="logout" class="logout-button">Выход</button>
   </div>
 </template>
 
-<script setup>
-import { ref, onMounted } from 'vue';
-import { fetchProducts } from '~/api/fetch-requests'; // Импортируем функцию из вашего api
-import DataTable from '~/components/DataTable.vue'; // Импортируйте компонент таблицы
+<script setup lang="ts">
+import { ref, onMounted } from "vue";
+import { useRouter } from "vue-router";
+import { fetchProducts } from "~/api/fetch-requests";
+import DataTable from "~/components/DataTable.vue";
+import type { Product } from "~/types/product";
 
-const products = ref([]);
+const products = ref<Product[]>([]);
+const router = useRouter();
 
 const loadProducts = async () => {
   try {
-    products.value = await fetchProducts(); // Загружаем данные о товарах
+    products.value = await fetchProducts();
+    console.log("Продукты:", products.value);
   } catch (error) {
-    console.error('Ошибка при загрузке продуктов:', error);
+    console.error("Ошибка загрузки продуктов:", error);
   }
 };
 
 const logout = () => {
-  localStorage.removeItem('loggedIn'); // Удалите данные сессии
-  window.location.href = '/'; // Редирект на страницу логина
+  localStorage.removeItem("loggedIn"); // Удаляем данные сессии
+  router.push("/"); // Перенаправление на страницу логина
 };
 
-onMounted(loadProducts); // Загружаем данные при монтировании компонента
+onMounted(loadProducts);
 </script>
-
-<style scoped>
-.account-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.logout-button {
-  background-color: #e74c3c;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  margin-bottom: 20px;
-}
-.logout-button:hover {
-  background-color: #c0392b;
-}
-</style>

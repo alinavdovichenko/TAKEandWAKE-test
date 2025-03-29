@@ -1,23 +1,23 @@
 <template>
     <form @submit.prevent="handleLogin" class="login-form">
-      <h2>Вход в систему</h2>
+      <h2>Login</h2>
       <div>
-        <label for="username">Имя пользователя</label>
+        <label for="username"></label>
         <input
           type="text"
           id="username"
           v-model="username"
-          placeholder="Введите имя пользователя"
+          placeholder="Имя пользователя"
           required
         />
       </div>
       <div>
-        <label for="password">Пароль</label>
+        <label for="password"></label>
         <input
           type="password"
           id="password"
           v-model="password"
-          placeholder="Введите пароль"
+          placeholder="Пароль"
           required
         />
       </div>

@@ -31,9 +31,28 @@ localStorage (для хранения сессии пользователя)
 3.2 Сборка и запуск на продакшене "npm run build / npm run start"
 
 ## 4. Структура проекта
-cat <<EOF
-my-nuxt-app/
-│── pages/
+
+my-nuxt-app/ 
+│── mock/
+│   ├── data.json
+│   ├── user.json 
+│── api/
+│   ├── fetch-requests.ts
+│── styles/
+│   ├── _variables.scss     
+│   ├── _mixins.scss        
+│   ├── _header.scss          
+│   ├── _login-page.scss      
+│   ├── _login-form.scss 
+│   ├── _data-table.scss     
+│   ├── main.scss 
+│── assets/  
+│   ├── fonts/  
+│   │   ├── AntonRegular/  
+│   │   │   ├── AntonRegular.eot  
+│   │   │   ├── AntonRegular.woff  
+│   │   │   └── AntonRegular.ttf  
+│── pages/  
 │   ├── index.vue (Страница логина)
 │   ├── account.vue (Страница аккаунта)
 │── store/
@@ -46,18 +65,15 @@ my-nuxt-app/
 │── middleware/
 │   ├── auth.ts (Проверка сессии)
 │── server/
-│   ├── index.ts (Express API)
-│── styles/
-│   ├── main.scss
-│── mock/
-│   ├── data.json
-│   ├── user.json
+│   ├── index.ts (Express API)           
 │── types/
 │   ├── product.ts
 │── api/
 │   ├── fetch-requests.ts
+│── public/
+│   ├── favicon.png
 │── nuxt.config.ts
-EOF
+
 ## 5. Описание основных функций
 
 📌 Авторизация (store/auth.ts)

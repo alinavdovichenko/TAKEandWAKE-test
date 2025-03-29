@@ -1,48 +1,43 @@
 <template>
-    <table>
+  <div class="table-container">
+    <table class="data-table">
       <thead>
         <tr>
           <th>ID</th>
           <th>Название</th>
+          <th>Категория</th>
+          <th>Цена (₽)</th>
           <th>Статус</th>
           <th>Дата создания</th>
-          <th>Цена</th>
+          <th>Ингредиенты</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="item in items" :key="item.id">
-          <td>{{ item.id }}</td>
-          <td>{{ item.name }}</td>
-          <td>{{ item.status }}</td>
-          <td>{{ item.date_created }}</td>
-          <td>{{ item.price.toFixed(2) }} ₽</td>
+        <tr v-for="product in items" :key="product.id">
+          <td>{{ product.id }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.category }}</td>
+          <td>{{ product.price.toFixed(2) }}</td>
+          <td :class="{ available: product.status === Status.Available, unavailable: product.status === Status.OutOfStock }">
+            {{ product.status }}
+          </td>
+          <td>{{ formatDate(product.date_created) }}</td>
+          <td>{{ product.ingredients.join(", ") }}</td>
         </tr>
       </tbody>
     </table>
-  </template>
-  
-  <script setup>
-  import { defineProps } from 'vue';
-  
-  const props = defineProps({
-    items: {
-      type: Array,
-      required: true
-    }
-  });
-  </script>
-  
-  <style scoped>
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  th, td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: left;
-  }
-  th {
-    background-color: #f4f4f4;
-  }
-  </style>
+  </div>
+</template>
+
+<script setup lang="ts">
+import type { Product } from "~/types/product";
+import { Status } from "~/types/product";
+
+const props = defineProps<{
+  items: Product[];
+}>();
+
+const formatDate = (dateString: string): string => {
+  return new Date(dateString).toLocaleDateString("ru-RU");
+};
+</script>

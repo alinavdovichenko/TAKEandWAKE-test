@@ -1,0 +1,103 @@
+[
+    {
+      "id": 1,
+      "name": "Латте",
+      "category": "Кофе",
+      "price": 250,
+      "status": "Доступен",
+      "date_created": "2024-03-25",
+      "ingredients": ["Эспрессо", "Молоко", "Пена"],
+      "availability": true
+    },
+    {
+      "id": 2,
+      "name": "Зелёный чай",
+      "category": "Чай",
+      "price": 180,
+      "status": "Нет в наличии",
+      "date_created": "2024-03-20",
+      "ingredients": ["Листовой зелёный чай"],
+      "availability": false
+    },
+    {
+      "id": 3,
+      "name": "Круассан",
+      "category": "Выпечка",
+      "price": 220,
+      "status": "Доступен",
+      "date_created": "2024-03-22",
+      "ingredients": ["Мука", "Масло", "Сахар", "Дрожжи"],
+      "availability": true
+    },
+    {
+      "id": 4,
+      "name": "Чизкейк",
+      "category": "Десерты",
+      "price": 300,
+      "status": "Доступен",
+      "date_created": "2024-03-21",
+      "ingredients": ["Сливочный сыр", "Яйца", "Сахар", "Песочное тесто"],
+      "availability": true
+    },
+    {
+      "id": 5,
+      "name": "Американо",
+      "category": "Кофе",
+      "price": 200,
+      "status": "Нет в наличии",
+      "date_created": "2024-03-19",
+      "ingredients": ["Эспрессо", "Горячая вода"],
+      "availability": false
+    },
+    {
+      "id": 6,
+      "name": "Медовик",
+      "category": "Десерты",
+      "price": 320,
+      "status": "Доступен",
+      "date_created": "2024-03-18",
+      "ingredients": ["Мёд", "Сметана", "Мука", "Яйца"],
+      "availability": true
+    },
+    {
+      "id": 7,
+      "name": "Капучино",
+      "category": "Кофе",
+      "price": 260,
+      "status": "Доступен",
+      "date_created": "2024-03-17",
+      "ingredients": ["Эспрессо", "Молоко", "Пена"],
+      "availability": true
+    },
+    {
+      "id": 8,
+      "name": "Чёрный чай",
+      "category": "Чай",
+      "price": 170,
+      "status": "Доступен",
+      "date_created": "2024-03-16",
+      "ingredients": ["Листовой чёрный чай"],
+      "availability": true
+    },
+    {
+      "id": 9,
+      "name": "Шоколадный маффин",
+      "category": "Выпечка",
+      "price": 190,
+      "status": "Нет в наличии",
+      "date_created": "2024-03-15",
+      "ingredients": ["Мука", "Какао", "Шоколад", "Яйца"],
+      "availability": false
+    },
+    {
+      "id": 10,
+      "name": "Эклер",
+      "category": "Десерты",
+      "price": 280,
+      "status": "Доступен",
+      "date_created": "2024-03-14",
+      "ingredients": ["Мука", "Крем", "Шоколадная глазурь"],
+      "availability": true
+    }
+  ]
+  

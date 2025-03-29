@@ -1,8 +1,8 @@
 <template>
-    <h1>Получить доступ</h1>
-    <NuxtRouteAnnouncer />
+  <div class="login-page">
     <LoginForm />
-  </template>
+  </div>
+</template>
 
 <script setup>
 import LoginForm from '~/components/LoginForm.vue';

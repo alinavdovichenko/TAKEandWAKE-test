@@ -1,0 +1,33 @@
+@use 'mixins';
+@use 'variables';
+
+.account-page {
+  padding-top: 100px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url('~/public/account-bg.jpg') no-repeat center bottom;
+  background-size: cover;
+
+  h2 {
+    font-family: Arial, serif;
+    color: variables.$text-color-light;
+  }
+}
+.logout-button {
+    display: flex;
+    margin-top: 30px;
+    background-color: #fff;
+    color: variables.$text-color-dark;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    &:hover {
+        background-color: #b3b3b3;
+      }
+  }
